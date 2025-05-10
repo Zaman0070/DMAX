@@ -142,7 +142,7 @@ class _DmaxScreenState extends ConsumerState<DmaxScreen> {
                   setState(() {
                     isGenerating = true;
                   });
-                  Future.delayed(const Duration(seconds: 7), () {
+                  Future.delayed(const Duration(seconds: 10), () {
                     setState(() {
                       isLoadData = true;
                     });
