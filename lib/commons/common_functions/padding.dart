@@ -25,6 +25,10 @@ const padding12 = SizedBox(
   height: 12,
   width: 12,
 );
+const padding10 = SizedBox(
+  height: 10,
+  width: 10,
+);
 
 const padding16 = SizedBox(
   height: 16,

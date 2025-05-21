@@ -23,6 +23,7 @@ class CustomTextField extends StatelessWidget {
   final Color? fillColor;
   final Color? borderColor;
   final int? maxLines;
+  final int? mimLines;
   final bool showLabel;
   final bool showReq;
   final String? label;
@@ -30,6 +31,7 @@ class CustomTextField extends StatelessWidget {
   final int? maxLength;
   final VoidCallback? onTap;
   final List<TextInputFormatter>? inputFormat;
+  final FocusNode? focusNode;
 
   const CustomTextField({
     super.key,
@@ -49,6 +51,7 @@ class CustomTextField extends StatelessWidget {
     this.fillColor,
     this.borderColor,
     this.maxLines,
+    this.mimLines,
     this.borderRadius,
     this.verticalPadding,
     this.verticalMargin,
@@ -59,6 +62,7 @@ class CustomTextField extends StatelessWidget {
     this.maxLength,
     this.onTap,
     this.inputFormat,
+    this.focusNode,
   });
 
   @override
@@ -96,6 +100,7 @@ class CustomTextField extends StatelessWidget {
           InkWell(
             onTap: onTap,
             child: TextFormField(
+              focusNode: focusNode,
               inputFormatters: inputFormat,
               maxLength: maxLength,
               enabled: enabled,
@@ -104,6 +109,7 @@ class CustomTextField extends StatelessWidget {
               controller: controller,
               keyboardType: inputType,
               maxLines: maxLines ?? 1,
+              minLines: mimLines ?? 1,
               style: getRegularStyle(
                   fontSize: MyFonts.size14,
                   color: fillColor != null

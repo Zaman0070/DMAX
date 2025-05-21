@@ -75,6 +75,7 @@ class AppAssets {
   static const String copySvg = '$svgIconPath/copy.svg';
   static const String infosSvg = '$svgIconPath/infos.svg';
   static const String codeSvg = '$svgIconPath/code.svg';
+  static const String growSvg = '$svgIconPath/grow.svg';
   static const String arrowcircleSvg = '$svgIconPath/arrow-circle.svg';
 
   // Icons
