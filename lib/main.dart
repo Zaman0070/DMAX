@@ -1,8 +1,9 @@
 import 'package:dmax_app/commons/common_imports/apis_commons.dart';
 import 'package:dmax_app/commons/common_imports/common_libs.dart';
 import 'package:dmax_app/core/extensions/color_extensions.dart';
-import 'package:dmax_app/features/main_menu/views/main_menu_screen.dart';
 import 'package:dmax_app/features/splash/controller/share_pref_controller.dart';
+import 'package:dmax_app/features/splash/danger/danger_screen.dart';
+import 'package:dmax_app/features/splash/info/personal_info_screen.dart';
 import 'package:dmax_app/features/splash/splash_screen.dart';
 import 'package:dmax_app/routes/route_manager.dart';
 import 'package:dmax_app/utils/constants/app_constants.dart';
@@ -89,7 +90,7 @@ class _MyAppState extends ConsumerState<MyApp> {
           theme: lightThemeData(context),
           onGenerateRoute: AppRoutes.onGenerateRoute,
           home: ref.read(sharePrefProvider).userInfo.isNotEmpty
-              ? const MainMenuScreen()
+              ? const PersonalInfoScreen()
               : const SplashScreen(),
         );
       },

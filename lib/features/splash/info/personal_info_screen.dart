@@ -58,7 +58,11 @@ class _PersonalInfoScreenState extends ConsumerState<PersonalInfoScreen> {
     "Déclencher des réactions & tester\nles limites. (Humour & Fun)"
   ];
 
-  final List<String> tensIcons = ["🔥", "🤝", "😂"];
+  final List<String> tensIcons = [
+    AppAssets.Fire,
+    AppAssets.shake,
+    AppAssets.joy
+  ];
   final List<String> signatureIcons = [AppAssets.sad, AppAssets.love];
 
   int selectedTensIndex = -1;
@@ -473,7 +477,7 @@ class _PersonalInfoScreenState extends ConsumerState<PersonalInfoScreen> {
             "Les réponses sont confidentielles et permettront de personnaliser au mieux les DM",
         child: BlurAnimatedList(
           selectIndex: selectedTensIndex,
-          isText: true,
+          isPng: true,
           texts: tensList,
           onChange: (selectedIndex) {
             setState(() {
@@ -582,16 +586,28 @@ class _PersonalInfoScreenState extends ConsumerState<PersonalInfoScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Mystérieux(se) 😐',
-                  style: TextStyle(
-                    fontSize: MyFonts.size16,
-                    fontFamily: AppConstants.fontFamily,
-                  )),
-              Text('Drôle 😂',
-                  style: TextStyle(
-                    fontSize: MyFonts.size16,
-                    fontFamily: AppConstants.fontFamily,
-                  )),
+              Row(
+                children: [
+                  Text('Mystérieux(se)',
+                      style: TextStyle(
+                        fontSize: MyFonts.size16,
+                        fontFamily: AppConstants.fontFamily,
+                      )),
+                  padding3,
+                  Image.asset(AppAssets.serious, height: 20.h, width: 20.w),
+                ],
+              ),
+              Row(
+                children: [
+                  Text('Drôle',
+                      style: TextStyle(
+                        fontSize: MyFonts.size16,
+                        fontFamily: AppConstants.fontFamily,
+                      )),
+                  padding3,
+                  Image.asset(AppAssets.joy, height: 20.h, width: 20.w),
+                ],
+              ),
             ],
           ),
         ],
@@ -679,16 +695,28 @@ class _PersonalInfoScreenState extends ConsumerState<PersonalInfoScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Introverti(e) 🫣',
-                  style: TextStyle(
-                    fontSize: MyFonts.size16,
-                    fontFamily: AppConstants.fontFamily,
-                  )),
-              Text('Joueur(se) 🔥 ',
-                  style: TextStyle(
-                    fontSize: MyFonts.size16,
-                    fontFamily: AppConstants.fontFamily,
-                  )),
+              Row(
+                children: [
+                  Text('Introverti(e)',
+                      style: TextStyle(
+                        fontSize: MyFonts.size16,
+                        fontFamily: AppConstants.fontFamily,
+                      )),
+                  padding3,
+                  Image.asset(AppAssets.shamee, height: 20.h, width: 20.w),
+                ],
+              ),
+              Row(
+                children: [
+                  Text('Joueur(se)',
+                      style: TextStyle(
+                        fontSize: MyFonts.size16,
+                        fontFamily: AppConstants.fontFamily,
+                      )),
+                  padding3,
+                  Image.asset(AppAssets.Fire, height: 20.h, width: 20.w),
+                ],
+              ),
             ],
           ),
         ],

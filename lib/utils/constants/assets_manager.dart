@@ -29,6 +29,7 @@ class AppAssets {
   static const String splashImage = '$imagesPath/splash.png';
   static const String screenshortsImage = '$imagesPath/screenshots.png';
   static const String screenshorts1Image = '$imagesPath/screenshots1.png';
+  static const String socialImage = '$imagesPath/social.png';
   static const String getStartImage = '$imagesPath/get_start.png';
   static const String oneImage = '$imagesPath/1.png';
   static const String twoImage = '$imagesPath/2.png';
@@ -117,6 +118,11 @@ class AppAssets {
   static const String reload = '$iconPath/reload.png';
   static const String love = '$iconPath/love.png';
   static const String sad = '$iconPath/sad.png';
+
+  static const String joy = '$iconPath/joy.png';
+  static const String serious = '$iconPath/serious.png';
+  static const String shake = '$iconPath/shake.png';
+  static const String shamee = '$iconPath/shamee.png';
 
 
   static const String Brain = '$iconPath/Brain.png';
